@@ -8,8 +8,11 @@ ListView {
     property real leftWidth: 0
     property string name: ""
     property var details
-    Component.onCompleted: height = childrenRect.height
-    spacing: 10
+    //Component.onCompleted: height = childrenRect.height
+    height: childrenRect.height
+    width: 700
+    spacing: 15
+    clip: true
     header: Row {
         spacing: 32
         Rectangle {
@@ -46,6 +49,7 @@ ListView {
             }
             // TODO add ListView for detail
             ListView {
+                clip: true
                 width: parent.width
                 height: childrenRect.height
                 model: details[detail]

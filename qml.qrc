@@ -2,6 +2,6 @@
     <qresource prefix="/">
         <file>Section.qml</file>
         <file>main.qml</file>
+        <file>rasp_orig.png</file>
     </qresource>
 </RCC>
-
