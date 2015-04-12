@@ -6,11 +6,11 @@ Window {
     id: root
     //    width: 1149
     //    height: 1680
-    // For dpi 97x97, A4: 210x 297 or 8.27 in × 11.02
-    // pixel := (8.27,11.02)x97
-    //       := (802,1069)
+    // For dpi 97x97, A4: 210x 297 or 8.27 in × 11.69
+    // pixel := (8.27,11.69)x97
+    //       := (802,1134)
     width: 802
-    height: 1069
+    height: 1134
     visible: true
     property int  nameWidth: 128
     ObjectModel {
@@ -44,7 +44,7 @@ Window {
                 stop();
                 return
             } else {
-                frame.contentY = (1069 - 160) * printPageIndex
+                frame.contentY = (1134 - 160) * printPageIndex
                 printPageIndex++;
             }
             viewPort.grabToImage(function(result) {
@@ -57,7 +57,7 @@ Window {
     Rectangle {
         id: viewPort
         width: 802
-        height: 1069
+        height: 1134
         color: "white"
         focus: true
         Keys.onEscapePressed: {
@@ -68,7 +68,7 @@ Window {
             x: 100
             y: 80
             width: 802 - 100
-            height: 1069 - 200
+            height: 1134 - 200
             spacing: 20
             focus: true
             clip:true
